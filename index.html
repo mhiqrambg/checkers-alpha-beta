@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkers - Player vs CPU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>DAMA GAME</h1>
+        <div class="game-info">
+            <div class="player-turn">
+                <strong>Giliran:</strong> <span id="current-player">Player (Merah)</span>
+            </div>
+            <div class="score">
+                <div>Player: <span id="player-score">12</span></div>
+                <div>CPU: <span id="cpu-score">12</span></div>
+            </div>
+        </div>
+        <div id="board" class="board"></div>
+        <div class="controls">
+            <button id="restart-btn" onclick="restartGame()">Mulai Ulang</button>
+            <div class="difficulty">
+                <label for="difficulty">Tingkat Kesulitan:</label>
+                <select id="difficulty" onchange="changeDifficulty()">
+                    <option value="2">Mudah</option>
+                    <option value="4" selected>Sedang</option>
+                    <option value="6">Sulit</option>
+                </select>
+            </div>
+        </div>
+        <div id="game-over" class="game-over hidden">
+            <div class="game-over-content">
+                <h2 id="winner-text"></h2>
+                <button onclick="restartGame()">Main Lagi</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="algoritma.js"></script>
+</body>
+</html>
